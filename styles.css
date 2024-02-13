@@ -1,82 +1,81 @@
-/* Reset CSS */
+/* Resetting default margin and padding */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Basic Styling */
+/* Basic styling */
 body {
   font-family: Arial, sans-serif;
+  line-height: 1.6;
 }
 
 .container {
-  max-width: 1200px;
+  width: 80%;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 header {
-  background: #333;
+  background-color: #252525;
   color: #fff;
   padding: 20px 0;
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
 }
 
-header h1 {
-  float: left;
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 32px;
+}
+
+header .logo span {
+  color: #ff0000;
 }
 
 nav ul {
-  float: right;
+  list-style-type: none;
 }
 
 nav ul li {
   display: inline;
-  margin-left: 20px;
+  margin-right: 20px;
 }
 
-.menu-toggle {
-  display: none;
-}
-
-.menu-toggle span {
-  display: block;
-  height: 3px;
-  background: #fff;
-  margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
 }
 
 #hero {
-  height: 100vh;
-  background: url('https://source.unsplash.com/1200x800/?nature') center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  background-image: url('https://source.unsplash.com/random/1920x1080');
+  background-size: cover;
+  background-position: center;
   color: #fff;
+  text-align: center;
+  padding: 100px 0;
 }
 
 #hero h2 {
-  font-size: 3rem;
+  font-size: 48px;
   margin-bottom: 20px;
 }
 
 .btn {
-  padding: 10px 20px;
-  background: #333;
+  display: inline-block;
+  background-color: #ff0000;
   color: #fff;
+  padding: 10px 20px;
   text-decoration: none;
-  border: none;
-  border-radius: 4px;
-  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-  background: #555;
+  background-color: #d60000;
 }
 
 section {
@@ -84,17 +83,28 @@ section {
 }
 
 section h2 {
-  font-size: 2rem;
+  font-size: 32px;
   margin-bottom: 20px;
 }
 
-.feature {
-  margin-bottom: 40px;
-}
-
 footer {
-  background: #333;
+  background-color: #252525;
   color: #fff;
   text-align: center;
   padding: 20px 0;
+}
+
+.social-link {
+  display: inline-block;
+  background-color: #3b5998;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-right: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: #2d4373;
 }
