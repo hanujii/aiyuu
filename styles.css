@@ -92,6 +92,9 @@ section {
   padding: 80px 0;
 }
 
+section #contact, #portfolio, #about{
+  color: #000
+} 
 section h2 {
   font-size: 32px;
   margin-bottom: 20px;
