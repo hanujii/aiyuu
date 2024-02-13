@@ -1,73 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayush Gupta - Portfolio</title>
-    <style>
-        /* CSS Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f7f7;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayush Gupta - Portfolio</title>
+<style>
+/* Stylesheet */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
 
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-        h1 {
-            text-align: center;
-            color: #333;
-        }
+h1 {
+    color: #333;
+}
 
-        .info {
-            margin-bottom: 20px;
-        }
+h2 {
+    color: #666;
+}
 
-        .info p {
-            margin: 5px 0;
-        }
+p {
+    color: #555;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
 
-        .btn:hover {
-            background-color: #0056b3;
-        }
-    </style>
+.btn:hover {
+    background-color: #0056b3;
+}
+
+@media print {
+    .no-print {
+        display: none;
+    }
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>Ayush Gupta - Portfolio</h1>
-        <div class="info">
-            <p><strong>Name:</strong> Ayush Gupta</p>
-            <p><strong>Currently studying:</strong> B. Pharma</p>
-            <p><strong>Age:</strong> 20 yrs</p>
-            <p><strong>Gender:</strong> Male</p>
-            <p><strong>Mobile No.:</strong> 8827490300</p>
-            <p><strong>Email:</strong> radhehanu143@gmail.com</p>
-            <p><strong>Schooling:</strong> O.P. Jindal School, Raigarh C.G.</p>
-        </div>
-        <a href="#" class="btn">Download Resume</a>
-    </div>
+<div class="container">
+    <h1>Ayush Gupta</h1>
+    <h2>Currently studying B. Pharma</h2>
+    <p>Age: 20 years<br>
+    Gender: Male<br>
+    Mobile No.: 8827490300<br>
+    Email: radhehanu143@gmail.com<br>
+    Schooling: O.P. Jindal School, Raigarh C.G.</p>
+    
+    <h2>Education</h2>
+    <p>Bachelor of Pharmacy (B. Pharma) - In Progress</p>
+    <p>O.P. Jindal School, Raigarh C.G.</p>
+    
+    <h2>Skills</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Responsive Web Design</li>
+    </ul>
+    
+    <h2>Experience</h2>
+    <p>No formal work experience yet, but actively working on personal projects to enhance skills.</p>
+    
+    <h2>Projects</h2>
+    <ul>
+        <li>Personal Portfolio Website - Built using HTML, CSS, and JavaScript</li>
+        <li>Online Pharmacy Store - Developing using React and Node.js</li>
+    </ul>
+    
+    <button class="btn no-print" onclick="window.print()">Print Resume</button>
+    <button class="btn no-print" onclick="downloadPDF()">Download PDF</button>
+</div>
 
-    <script>
-        // JavaScript code (if any)
-        // You can add JavaScript functionalities here
-    </script>
+<script>
+// JavaScript for PDF download
+function downloadPDF() {
+    var container = document.querySelector('.container');
+    var filename = 'Ayush_Gupta_Resume.pdf';
+    
+    html2pdf()
+        .set({html2canvas: { scale: 2 }, filename: filename, margin: 5, jsPDF: {unit: 'mm', format: 'a4', orientation: 'portrait'}})
+        .from(container)
+        .save();
+}
+</script>
 </body>
 </html>
