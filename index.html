@@ -5,73 +5,102 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ayush Gupta - Portfolio</title>
 <style>
-  body {
+/* Stylesheet */
+body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    color: #333;
-  }
-  .container {
+}
+
+.container {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  h1 {
-    color: #007f5f;
-  }
-  .contact-info {
-    margin-bottom: 20px;
-  }
-  .btn {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    color: #666;
+}
+
+p {
+    color: #555;
+}
+
+.btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #4caf50;
+    background-color: #007bff;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    cursor: pointer;
     transition: background-color 0.3s;
-  }
-  .btn:hover {
-    background-color: #45a049;
-  }
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+@media print {
+    .no-print {
+        display: none;
+    }
+}
 </style>
 </head>
 <body>
-
 <div class="container">
-  <h1>Ayush Gupta</h1>
-  <div class="contact-info">
-    <p>Currently studying: B. Pharma</p>
-    <p>Age: 20 yrs</p>
-    <p>Gender: Male</p>
-    <p>Mobile No.: 8827490300</p>
-    <p>Email: radhehanu143@gmail.com</p>
-    <p>Schooling: O.P. Jindal School, Raigarh C.G.</p>
-  </div>
-  <div class="buttons">
-    <button class="btn" onclick="downloadResume()">Download</button>
-    <button class="btn" onclick="printResume()">Print</button>
-  </div>
+    <h1>Ayush Gupta</h1>
+    <h2>Currently studying B. Pharma</h2>
+    <p>Age: 20 years<br>
+    Gender: Male<br>
+    Mobile No.: 8827490300<br>
+    Email: radhehanu143@gmail.com<br>
+    Schooling: O.P. Jindal School, Raigarh C.G.</p>
+    
+    <h2>Education</h2>
+    <p>Bachelor of Pharmacy (B. Pharma) - In Progress</p>
+    <p>O.P. Jindal School, Raigarh C.G.</p>
+    
+    <h2>Skills</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Responsive Web Design</li>
+    </ul>
+    
+    <h2>Experience</h2>
+    <p>No formal work experience yet, but actively working on personal projects to enhance skills.</p>
+    
+    <h2>Projects</h2>
+    <ul>
+        <li>Personal Portfolio Website - Built using HTML, CSS, and JavaScript</li>
+        <li>Online Pharmacy Store - Developing using React and Node.js</li>
+    </ul>
+    
+    <button class="btn no-print" onclick="window.print()">Print Resume</button>
+    <button class="btn no-print" onclick="downloadPDF()">Download PDF</button>
 </div>
 
 <script>
-  function downloadResume() {
-    const pdf = new jsPDF();
-    const resumeContent = document.querySelector('.container').innerHTML;
-    pdf.fromHTML(resumeContent, 15, 15);
-    pdf.save('Ayush_Gupta_Resume.pdf');
-  }
-
-  function printResume() {
-    window.print();
-  }
+// JavaScript for PDF download
+function downloadPDF() {
+    var container = document.querySelector('.container');
+    var filename = 'Ayush_Gupta_Resume.pdf';
+    
+    html2pdf()
+        .set({html2canvas: { scale: 2 }, filename: filename, margin: 5, jsPDF: {unit: 'mm', format: 'a4', orientation: 'portrait'}})
+        .from(container)
+        .save();
+}
 </script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </body>
 </html>
