@@ -93,7 +93,7 @@ section {
 }
 
 section #contact, #portfolio, #about, #skills{
-  color: #000
+  color: #000;
 } 
 section h2 {
   font-size: 32px;
