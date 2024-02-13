@@ -1,53 +1,58 @@
-/* General Styles */
+/* CSS styles will go here */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
 }
-
-header, footer {
-  background-color: #333;
+header {
+  background-color: #db7f1d; /* Facebook-like color */
   color: #fff;
   padding: 20px;
   text-align: center;
 }
-
-main {
-  padding: 20px;
+nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
-
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+nav a:hover {
+  background-color: #29487d;
+}
+.container {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
 section {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
-
-h1 {
-  margin-bottom: 5px;
+.logo {
+  font-family: "Protest Revolution", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
 }
-
-h2 {
-  margin-bottom: 10px;
+.logo .ayush {
+  color: #ff0000; /* Different color for "ayush" */
 }
-
-ul {
-  list-style-type: none;
-  padding: 0;
+.logo .dot {
+  color: #00ff00; /* Different color for "." */
 }
-
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #db7f1d;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-right: 10px;
 }
-
-/* Responsive Styles */
-@media screen and (min-width: 768px) {
-  main {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  section {
-    flex: 1;
-    margin-right: 20px;
-  }
+.button:hover {
+  background-color: #29487d;
 }
