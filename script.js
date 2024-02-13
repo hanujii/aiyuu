@@ -1,4 +1,6 @@
-// JavaScript code will go here
-document.getElementById('printBtn').addEventListener('click', function() {
-    window.print();
-  });
+const menuToggle = document.querySelector('.menu-toggle input');
+const nav = document.querySelector('nav ul');
+
+menuToggle.addEventListener('click', function() {
+  nav.classList.toggle('slide');
+});
