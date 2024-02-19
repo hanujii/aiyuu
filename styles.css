@@ -13,7 +13,9 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-}
+  Background: #252525;
+  color: #000;
+} 
 
 .container {
   width: 80%;
@@ -77,9 +79,9 @@ nav ul li a:hover {
   display: inline-block;
   background-color: #ff0000;
   color: #fff;
-  padding: 10px 20px;
+  padding: 30px 20px;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 15px;
   transition: background-color 0.3s ease;
 }
 
@@ -89,7 +91,9 @@ nav ul li a:hover {
 
 section {
   padding: 80px 0;
+  color: #fff;
 }
+
 
 section h2 {
   font-size: 32px;
@@ -97,10 +101,14 @@ section h2 {
 }
 
 footer {
-  background-color: #252525;
+  background-color: #000;
   color: #fff;
   text-align: center;
   padding: 20px 0;
+}
+
+footer.container p{
+  color: #000;
 }
 
 .social-link {
@@ -118,7 +126,7 @@ footer {
   background-color: #2d4373;
 }
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 600px){
   nav{
     display: none;
   }
