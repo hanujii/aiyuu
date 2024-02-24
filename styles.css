@@ -11,123 +11,127 @@
 
 /* Basic styling */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  Background: #252525;
-  color: #000;
-} 
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
 
 .container {
-  width: 80%;
-  margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-header {
-  background: #252525;
-  color: #fff;
-  padding: 20px 0;
+/* Navigation */
+.navbar {
+    background-color: #247BA0;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header .logo {
-  font-family: 'Playfair Display';
-  font-size: 32px;
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #70C1B3;
 }
 
-header .logo span {
-  color: #ff0000;
+.logo span {
+    color: #F25F5C;
 }
 
-nav ul {
-  list-style-type: none;
+.nav-links {
+    list-style: none;
+    display: flex;
 }
 
-nav ul li {
-  display: inline;
-  margin-right: 20px;
+.nav-links li {
+    margin-right: 20px;
 }
 
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-  background-color: #2d4373;
+.nav-links a:hover {
+    color: #70C1B3;
 }
 
-#hero {
-  background-image: url('./images/dark1.jpg');
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  text-align: center;
-  padding: 100px 0;
-}
-
-#hero h2 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.btn {
-  display: inline-block;
-  background-color: #ff0000;
-  color: #fff;
-  padding: 30px 20px;
-  text-decoration: none;
-  border-radius: 15px;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #d60000;
-}
-
-section {
-  padding: 80px 0;
-  color: #fff;
-}
-
-
-section h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-footer {
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-}
-
-footer.container p{
-  color: #000;
-}
-
-.social-link {
-  display: inline-block;
-  background-color: #3b5998;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  margin-right: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.social-link:hover {
-  background-color: #2d4373;
-}
-
-@media only screen and (max-width: 600px){
-  nav{
+.hamburger-menu {
     display: none;
-  }
-} 
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu .line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+/* Home Section */
+.home-section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.home-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* About Section */
+.about-section {
+    padding: 100px 0;
+}
+
+.resume {
+    /* Add styles for resume content */
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 100px 0;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 100px 0;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 300px;
+    padding: 20px;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+    scroll-snap-align: start;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 100px 0;
+}
